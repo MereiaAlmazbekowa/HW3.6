@@ -1,0 +1,47 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="navigation_graph"
+    app:startDestination="@id/cakeFragment">
+
+    <fragment
+        android:id="@+id/cakeFragment"
+        android:name="com.example.hw36.fragment.CakeFragment"
+        android:label="Cake Fragment"
+        tools:layout="@layout/fragment_cake">
+        <action
+            android:id="@+id/action_cakeFragment_to_cakeDetailFragment"
+            app:destination="@id/cakeDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cakeDetailFragment"
+        android:name="com.example.hw36.fragment.CakeDetailFragment"
+        android:label="Cake Detail Fragment"
+        tools:layout="@layout/fragment_cake_detail" />
+
+    <fragment
+        android:id="@+id/drinksFragment"
+        android:name="com.example.hw36.fragment.DrinksFragment"
+        android:label="Drinks Fragment"
+        tools:layout="@layout/fragment_drinks">
+        <action
+            android:id="@+id/action_drinksFragment_to_drinksDetailFragment"
+            app:destination="@id/drinksDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/drinksDetailFragment"
+        android:name="com.example.hw36.DrinksDetailFragment"
+        android:label="Drinks Detail Fragment"
+        tools:layout="@layout/fragment_drinks_detail" />
+</navigation>

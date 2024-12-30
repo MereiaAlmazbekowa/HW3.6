@@ -1,9 +1,11 @@
 package com.example.hw36.item
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.hw36.databinding.FragmentCakeBinding
 
 class ItemAdapter(
@@ -17,6 +19,13 @@ class ItemAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
+        val inflater = LayoutInflater.from(context)
+        val binding = FragmentCakeBinding.inflate(inflater,parent,false)
+        return ItemViewHolder(binding)
+    }
+
+    fun bind (item: Item, listener:OnItemClickListener){
+
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
